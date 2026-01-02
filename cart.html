@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>장바구니 - MAISON VERGE</title>
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+    <main class="cart">
+        <!-- ========== A. 상단 헤더 ========== -->
+        <header class="cart-header">
+            <button class="cart-header__back" aria-label="뒤로가기">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <h1 class="cart-header__logo">MAISON VERGE</h1>
+            <button class="cart-header__search" aria-label="검색">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                    <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M16 16L21 21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+            </button>
+        </header>
+
+        <!-- ========== B. 페이지 타이틀 ========== -->
+        <div class="cart-title">
+            <h2 class="cart-title__text">장바구니 <span class="cart-title__count" id="cartCount">(3)</span></h2>
+        </div>
+
+        <!-- ========== 장바구니 상품 리스트 ========== -->
+        <div class="cart-list" id="cartList">
+            <!-- 상품 카드 1: MAISON VERGE -->
+            <article class="cart-item" data-price="105105" data-id="1">
+                <div class="cart-item__top">
+                    <div class="cart-item__thumb">
+                        <!-- 여기 파일명 교체: images/cart_item01.jpg -->
+                        <img src="images/detail/detail1.jpg" alt="누아르 인텐스 오 드 퍼퓸">
+                    </div>
+                    <div class="cart-item__info">
+                        <span class="cart-item__brand cart-item__brand--maison">MAISON VERGE</span>
+                        <h3 class="cart-item__name">누아르 인텐스 오 드 퍼퓸</h3>
+                        <p class="cart-item__name-en">Noir Intense Eau de Parfum</p>
+                        <div class="cart-item__sizes">
+                            <button class="cart-item__size" data-size="30ml">30ml</button>
+                            <button class="cart-item__size cart-item__size--active" data-size="50ml">50ml</button>
+                            <button class="cart-item__size" data-size="100ml">100ml</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-item__middle">
+                    <div class="cart-item__quantity">
+                        <button class="cart-item__qty-btn cart-item__qty-btn--minus" aria-label="수량 감소">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                        </button>
+                        <span class="cart-item__qty-num">1</span>
+                        <button class="cart-item__qty-btn cart-item__qty-btn--plus" aria-label="수량 증가">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                        </button>
+                    </div>
+                    <div class="cart-item__price">
+                        <div class="cart-item__price-top">
+                            <span class="cart-item__discount">41%</span>
+                            <span class="cart-item__original">178,000원</span>
+                        </div>
+                        <div class="cart-item__final">105,105원</div>
+                    </div>
+                </div>
+                <div class="cart-item__bottom">
+                    <button class="cart-item__wishlist">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 21C12 21 3 13.5 3 8.5C3 5.42 5.42 3 8.5 3C10.24 3 11.91 3.81 13 5.09C14.09 3.81 15.76 3 17.5 3C20.58 3 23 5.42 23 8.5C23 13.5 14 21 14 21" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                        <span>찜하기</span>
+                    </button>
+                    <button class="cart-item__delete">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 6H5H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M8 6V4C8 3.44772 8.44772 3 9 3H15C15.5523 3 16 3.44772 16 4V6M19 6V20C19 20.5523 18.5523 21 18 21H6C5.44772 21 5 20.5523 5 20V6H19Z" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                        <span>삭제</span>
+                    </button>
+                </div>
+            </article>
+
+            <!-- 상품 카드 2: DIPTYQUE -->
+            <article class="cart-item" data-price="291200" data-id="2">
+                <div class="cart-item__top">
+                    <div class="cart-item__thumb">
+                        <!-- 여기 파일명 교체: images/cart_item02.jpg -->
+                        <img src="images/home/twocard2.png" alt="도손 오 드 뚜왈렛">
+                    </div>
+                    <div class="cart-item__info">
+                        <span class="cart-item__brand cart-item__brand--diptyque">DIPTYQUE</span>
+                        <h3 class="cart-item__name">도손 오 드 뚜왈렛</h3>
+                        <p class="cart-item__name-en">Doson Eau de Toilette</p>
+                        <div class="cart-item__sizes">
+                            <button class="cart-item__size" data-size="50ml">50ml</button>
+                            <button class="cart-item__size cart-item__size--active" data-size="100ml">100ml</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-item__middle">
+                    <div class="cart-item__quantity">
+                        <button class="cart-item__qty-btn cart-item__qty-btn--minus" aria-label="수량 감소">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                        </button>
+                        <span class="cart-item__qty-num">2</span>
+                        <button class="cart-item__qty-btn cart-item__qty-btn--plus" aria-label="수량 증가">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                        </button>
+                    </div>
+                    <div class="cart-item__price">
+                        <div class="cart-item__price-top">
+                            <span class="cart-item__discount">20%</span>
+                            <span class="cart-item__original">182,000원</span>
+                        </div>
+                        <div class="cart-item__final">291,200원</div>
+                    </div>
+                </div>
+                <div class="cart-item__bottom">
+                    <button class="cart-item__wishlist cart-item__wishlist--active">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 21C12 21 3 13.5 3 8.5C3 5.42 5.42 3 8.5 3C10.24 3 11.91 3.81 13 5.09C14.09 3.81 15.76 3 17.5 3C20.58 3 23 5.42 23 8.5C23 13.5 14 21 14 21" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                        <span>찜하기</span>
+                    </button>
+                    <button class="cart-item__delete">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 6H5H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M8 6V4C8 3.44772 8.44772 3 9 3H15C15.5523 3 16 3.44772 16 4V6M19 6V20C19 20.5523 18.5523 21 18 21H6C5.44772 21 5 20.5523 5 20V6H19Z" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                        <span>삭제</span>
+                    </button>
+                </div>
+            </article>
+
+            <!-- 상품 카드 3: TOMFORD -->
+            <article class="cart-item" data-price="164500" data-id="3">
+                <div class="cart-item__top">
+                    <div class="cart-item__thumb">
+                        <!-- 여기 파일명 교체: images/cart_item03.jpg -->
+                        <img src="images/home/three1.png" alt="화이트 스웨이드 오 드 퍼퓸">
+                    </div>
+                    <div class="cart-item__info">
+                        <span class="cart-item__brand cart-item__brand--tomford">TOMFORD</span>
+                        <h3 class="cart-item__name">화이트 스웨이드 오 드 퍼퓸</h3>
+                        <p class="cart-item__name-en">White Suede Eau de Parfum</p>
+                        <div class="cart-item__sizes">
+                            <button class="cart-item__size cart-item__size--active" data-size="30ml">30ml</button>
+                            <button class="cart-item__size" data-size="50ml">50ml</button>
+                            <button class="cart-item__size" data-size="100ml">100ml</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-item__middle">
+                    <div class="cart-item__quantity">
+                        <button class="cart-item__qty-btn cart-item__qty-btn--minus" aria-label="수량 감소">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                        </button>
+                        <span class="cart-item__qty-num">1</span>
+                        <button class="cart-item__qty-btn cart-item__qty-btn--plus" aria-label="수량 증가">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                        </button>
+                    </div>
+                    <div class="cart-item__price">
+                        <div class="cart-item__price-top">
+                            <span class="cart-item__discount">30%</span>
+                            <span class="cart-item__original">235,000원</span>
+                        </div>
+                        <div class="cart-item__final">164,500원</div>
+                    </div>
+                </div>
+                <div class="cart-item__bottom">
+                    <button class="cart-item__wishlist">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 21C12 21 3 13.5 3 8.5C3 5.42 5.42 3 8.5 3C10.24 3 11.91 3.81 13 5.09C14.09 3.81 15.76 3 17.5 3C20.58 3 23 5.42 23 8.5C23 13.5 14 21 14 21" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                        <span>찜하기</span>
+                    </button>
+                    <button class="cart-item__delete">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 6H5H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M8 6V4C8 3.44772 8.44772 3 9 3H15C15.5523 3 16 3.44772 16 4V6M19 6V20C19 20.5523 18.5523 21 18 21H6C5.44772 21 5 20.5523 5 20V6H19Z" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                        <span>삭제</span>
+                    </button>
+                </div>
+            </article>
+        </div>
+
+        <!-- ========== 쿠폰/포인트 영역 ========== -->
+        <section class="cart-coupon">
+            <a href="#" class="cart-coupon__item">
+                <div class="cart-coupon__left">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M20 12V22H4V12M22 7H2V12H22V7ZM12 22V7M12 7H7.5C6.83696 7 6.20107 6.73661 5.73223 6.26777C5.26339 5.79893 5 5.16304 5 4.5C5 3.83696 5.26339 3.20107 5.73223 2.73223C6.20107 2.26339 6.83696 2 7.5 2C11 2 12 7 12 7ZM12 7H16.5C17.163 7 17.7989 6.73661 18.2678 6.26777C18.7366 5.79893 19 5.16304 19 4.5C19 3.83696 18.7366 3.20107 18.2678 2.73223C17.7989 2.26339 17.163 2 16.5 2C13 2 12 7 12 7Z" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    <span>쿠폰 적용</span>
+                </div>
+                <svg class="cart-coupon__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+            </a>
+            <a href="#" class="cart-coupon__item">
+                <div class="cart-coupon__left">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    <span>포인트 사용</span>
+                </div>
+                <span class="cart-coupon__points">보유 5,000P</span>
+            </a>
+        </section>
+
+        <!-- ========== 결제 정보 박스 ========== -->
+        <section class="cart-payment">
+            <h3 class="cart-payment__title">결제 정보</h3>
+            <div class="cart-payment__row">
+                <span class="cart-payment__label">상품금액</span>
+                <span class="cart-payment__value" id="productTotal">560,805원</span>
+            </div>
+            <div class="cart-payment__row">
+                <span class="cart-payment__label">할인금액</span>
+                <span class="cart-payment__value cart-payment__value--discount" id="discountTotal">-0원</span>
+            </div>
+            <div class="cart-payment__row">
+                <span class="cart-payment__label">배송비</span>
+                <span class="cart-payment__value">무료</span>
+            </div>
+            <div class="cart-payment__total">
+                <span class="cart-payment__total-label">총 결제금액</span>
+                <span class="cart-payment__total-value" id="grandTotal">560,805원</span>
+            </div>
+        </section>
+
+        <!-- ========== 함께 담으면 좋은 향 ========== -->
+        <section class="cart-recommend">
+            <h3 class="cart-recommend__title">함께 담으면 좋은 향</h3>
+            <div class="cart-recommend__grid">
+                <a href="#" class="cart-recommend__card">
+                    <div class="cart-recommend__thumb">
+                        <!-- 여기 파일명 교체: images/reco_cart_01.jpg -->
+                        <img src="images/cart1-1.png" alt="블랑쉬 오 드 퍼퓸">
+                    </div>
+                    <div class="cart-recommend__info">
+                        <span class="cart-recommend__brand">BYREDO</span>
+                        <h4 class="cart-recommend__name">블랑쉬 오 드 퍼퓸</h4>
+                        <div class="cart-recommend__price">
+                            <span class="cart-recommend__discount">15%</span>
+                            <span class="cart-recommend__final">189,000원</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="cart-recommend__card">
+                    <div class="cart-recommend__thumb">
+                        <!-- 여기 파일명 교체: images/reco_cart_02.jpg -->
+                        <img src="images/home/four3.jpg" alt="우드 세이지 앤 씨 솔트">
+                    </div>
+                    <div class="cart-recommend__info">
+                        <span class="cart-recommend__brand">BJÖRK AND BERRIES</span>
+                        <h4 class="cart-recommend__name">화이트 포레스트 퍼퓸 </h4>
+                        <div class="cart-recommend__price">
+                            <span class="cart-recommend__discount">10%</span>
+                            <span class="cart-recommend__final">112,500원</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- 하단 고정 영역 스페이서 -->
+        <div class="cart-spacer"></div>
+    </main>
+
+    <!-- ========== 하단 고정 결제 CTA 바 ========== -->
+    <div class="cart-cta">
+        <button class="cart-cta__btn" id="checkoutBtn">
+            총 <span id="ctaTotal">560,805</span>원 구매하기
+        </button>
+    </div>
+
+    <!-- <nav class="home-tabbar">
+        <a href="#" class="home-tabbar__item home-tabbar__item--active">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 9L12 2L21 9V20C21 21.1 20.1 22 19 22H5C3.9 22 3 21.1 3 20V9Z" stroke="currentColor" stroke-width="1.5"/><path d="M9 22V12H15V22" stroke="currentColor" stroke-width="1.5"/></svg>
+            <span>Home</span>
+        </a>
+        <a href="#" class="home-tabbar__item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" stroke="currentColor" stroke-width="1.5"/><rect x="14" y="3" width="7" height="7" stroke="currentColor" stroke-width="1.5"/><rect x="3" y="14" width="7" height="7" stroke="currentColor" stroke-width="1.5"/><rect x="14" y="14" width="7" height="7" stroke="currentColor" stroke-width="1.5"/></svg>
+            <span>Category</span>
+        </a>
+        <a href="#" class="home-tabbar__item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/><rect x="7" y="7" width="3" height="3" fill="currentColor"/><rect x="14" y="7" width="3" height="3" fill="currentColor"/><rect x="7" y="14" width="3" height="3" fill="currentColor"/><rect x="14" y="14" width="3" height="3" fill="currentColor"/></svg>
+            <span>QR</span>
+        </a>
+        <a href="#" class="home-tabbar__item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M18 8C18 6.4 17.4 4.9 16.2 3.8C15.1 2.6 13.6 2 12 2C10.4 2 8.9 2.6 7.8 3.8C6.6 4.9 6 6.4 6 8C6 15 3 17 3 17H21C21 17 18 15 18 8Z" stroke="currentColor" stroke-width="1.5"/><path d="M13.7 21C13.5 21.3 13.3 21.6 13 21.7C12.7 21.9 12.4 22 12 22C11.6 22 11.3 21.9 11 21.7C10.7 21.6 10.4 21.3 10.3 21" stroke="currentColor" stroke-width="1.5"/></svg>
+            <span>Alarm</span>
+        </a>
+        <a href="#" class="home-tabbar__item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M20 21V19C20 17.9 19.6 16.9 18.8 16.2C18.1 15.4 17.1 15 16 15H8C6.9 15 5.9 15.4 5.2 16.2C4.4 16.9 4 17.9 4 19V21" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="1.5"/></svg>
+            <span>My</span>
+        </a>
+    </nav> -->
+
+
+    <script src="js/cart.js"></script>
+</body>
+</html>

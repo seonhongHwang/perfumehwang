@@ -1,0 +1,1107 @@
+/* reset */
+*{margin: 0; padding: 0; box-sizing: border-box;}
+li{list-style-type: none;}
+a{text-decoration: none; color: inherit;}
+address, em, i{font-style: normal;}
+button {background: none; border: none;}
+img{vertical-align: middle;}
+
+
+/* CSS 변수 정의 */
+.home {
+    --home-brown: #8B6914;
+    --home-brown-light: #A67C52;
+    --home-brown-dark: #5C4A1F;
+    --home-gold: #C9A962;
+    --home-text-dark: #222222;
+    --home-text-gray: #666666;
+    --home-text-light: #999999;
+    --home-border: #E5E5E5;
+    --home-bg: #FFFFFF;
+    --home-red: #E53935;
+    --home-star: #FFB800;
+    --home-star-gray: #CCCCCC;
+}
+
+/* 기본 리셋 */
+.home * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.home {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', sans-serif;
+    background: var(--home-bg);
+    color: var(--home-text-dark);
+    max-width: 390px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ========== A. 상단 헤더 ========== */
+.home-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 52px;
+    padding: 0 16px;
+    background: var(--home-bg);
+    border-bottom: 1px solid var(--home-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.home-header__menu {
+    background: none;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    color: var(--home-text-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-header__logo {
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+    color: var(--home-text-dark);
+    text-align: center;
+}
+
+.home-header__icons {
+display: flex;
+align-items: center;
+gap: 12px;
+}
+
+.home-header__icon {
+background: none;
+border: none;
+padding: 4px;
+cursor: pointer;
+color: var(--home-text-dark);
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+/* ========== B. 히어로 배너 슬라이드 ========== */
+.home-hero {
+position: relative;
+width: 100%;
+}
+
+.home-hero__viewport {
+width: 100%;
+overflow: hidden;
+touch-action: pan-y;
+}
+
+.home-hero__track {
+    display: flex;
+    transition: transform 0.4s ease;
+    will-change: transform;
+}
+
+.home-hero__slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.home-hero__img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.home-hero__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.home-hero__text {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.home-hero__text--highlight {
+    font-weight: 600;
+    color: #FFE4B5;
+}
+
+.home-hero__indicators {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    padding: 12px 0 16px;
+}
+
+.home-hero__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #CCCCCC;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.home-hero__dot--active {
+    width: 20px;
+    height: 8px;
+    border-radius: 4px;
+    background: var(--home-text-dark);
+}
+
+/* ========== C. 카테고리 필터 버튼 ========== */
+.home-category {
+    padding: 0 16px 20px;
+}
+
+.home-category__buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.home-category__btn {
+    flex: 1;
+    height: 38px;
+    border-radius: 19px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: var(--home-bg);
+    border: 1px solid var(--home-border);
+    color: var(--home-brown);
+}
+
+.home-category__btn--active {
+    background: var(--home-brown);
+    border-color: var(--home-brown);
+    color: #FFFFFF;
+}
+
+/* ========== 메종베르주 제품 슬라이드 ========== */
+.home-section--maison {
+    padding: 0 0 20px;
+}
+
+.home-products {
+    width: 100%;
+}
+
+.home-products__viewport {
+    overflow: hidden;
+    width: 100%;
+    touch-action: pan-y;
+}
+
+.home-products__track {
+    display: flex;
+    transition: transform 0.3s ease;
+    will-change: transform;
+    padding-left: 16px;
+}
+
+.home-products__slide {
+    flex-shrink: 0;
+    padding-right: 12px;
+}
+
+/* 메종베르주 카드 - 화면에 약 2.2개 노출 */
+.home-section--maison .home-products__slide {
+    width: 165px;
+}
+
+/* 공통 카드 스타일 */
+.home-card {
+    width: 100%;
+}
+
+.home-card__thumb {
+    position: relative;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #F5F5F5;
+}
+
+.home-card__thumb img {
+    width: 100%;
+    height: 165px;
+    /* object-fit: cover; */
+    display: block;
+}
+
+.home-card__badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.home-card__badge--new {
+    background: #4CAF50;
+}
+
+.home-card__badge--best {
+    background: var(--home-text-dark);
+}
+
+.home-card__info {
+    padding: 10px 0;
+}
+
+.home-card__brand {
+    display: block;
+    font-size: 11px;
+    color: var(--home-text-light);
+    margin-bottom: 4px;
+}
+
+.home-card__name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--home-text-dark);
+    margin-bottom: 2px;
+    line-height: 1.3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.home-card__name-en {
+    font-size: 11px;
+    color: var(--home-text-light);
+    margin-bottom: 6px;
+}
+
+.home-card__price-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 2px;
+}
+
+.home-card__discount {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--home-red);
+}
+
+.home-card__original {
+    font-size: 12px;
+    color: var(--home-text-light);
+    text-decoration: line-through;
+}
+
+.home-card__price {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--home-text-dark);
+}
+
+.home-card__rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin: 6px 0;
+}
+
+.home-card__star {
+    color: var(--home-red);
+    font-size: 12px;
+}
+
+.home-card__star--gold {
+    color: var(--home-star);
+}
+
+.home-card__star-score {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--home-text-dark);
+}
+
+.home-card__review {
+    font-size: 11px;
+    color: var(--home-text-light);
+}
+
+.home-card__stars {
+    font-size: 11px;
+    color: var(--home-star);
+    letter-spacing: -1px;
+}
+
+.home-card__review-count {
+    font-size: 11px;
+    color: var(--home-text-light);
+}
+
+.home-card__desc {
+    font-size: 10px;
+    color: var(--home-text-gray);
+    margin-bottom: 6px;
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.home-card__final-price {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.home-card__actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid var(--home-border);
+}
+
+.home-card__action {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: var(--home-text-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-card__action:hover {
+    color: var(--home-text-dark);
+}
+
+/* ========== D. 중간 가로 배너 카드 ========== */
+.home-banner {
+    padding: 0 16px 24px;
+}
+
+.home-banner__card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    height: 50px;
+    background: var(--home-bg);
+    border: 1px solid var(--home-border);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--home-text-dark);
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.home-banner__card:hover {
+    background: #F9F9F9;
+}
+
+.home-banner__arrow {
+    color: var(--home-text-gray);
+}
+
+/* ========== 섹션 공통 ========== */
+.home-section {
+    padding-bottom: 32px;
+}
+
+.home-section__title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--home-text-dark);
+    padding: 0 16px 16px;
+    letter-spacing: 0.5px;
+}
+
+/* ========== DIPTYQUE 슬라이드 ========== */
+.home-section--diptyque .home-products__slide {
+    width: 200px;
+}
+
+.home-card--diptyque .home-card__thumb--diptyque img {
+    height: 220px;
+}
+
+/* ========== TOMFORD 슬라이드 ========== */
+.home-section--tomford .home-products__slide {
+    width: 180px;
+}
+
+.home-card--tomford .home-card__thumb--tomford img {
+    height: 180px;
+}
+
+/* ========== BJÖRK AND BERRIES 슬라이드 ========== */
+.home-section--bjork .home-products__slide {
+    width: 165px;
+}
+
+.home-card--bjork .home-card__thumb--bjork img {
+    height: 165px;
+}
+
+/* ========== 반응형 (모바일 390px 기준) ========== */
+@media screen and (max-width: 390px) {
+    .home {
+        max-width: 100%;
+    }
+    
+    .home-hero__img {
+        height: 180px;
+    }
+    
+    .home-hero__text {
+        font-size: 16px;
+    }
+    
+    .home-category__btn {
+        font-size: 12px;
+        padding: 0 8px;
+    }
+}
+
+/* ========== 스크롤바 숨김 ========== */
+.home-products__viewport::-webkit-scrollbar {
+    display: none;
+}
+
+.home-products__viewport {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* ========== 애니메이션 ========== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.home-card {
+    animation: fadeIn 0.4s ease forwards;
+}
+
+/* ========== TPO 가이드북 섹션 ========== */
+.home-tpo {
+    padding: 24px 16px 32px;
+}
+
+.home-tpo__title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--home-text-dark);
+    margin-bottom: 16px;
+}
+
+.home-tpo__banner {
+    display: block;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    text-decoration: none;
+}
+
+.home-tpo__banner-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.home-tpo__banner-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.home-tpo__banner-text {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.home-tpo__banner-sub {
+    color: rgba(255,255,255,0.9);
+    font-size: 13px;
+    margin-top: 6px;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+}
+
+.home-tpo__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.home-tpo__item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid #F0EDE8;
+    text-decoration: none;
+    color: var(--home-text-dark);
+}
+
+.home-tpo__item:last-child {
+    border-bottom: none;
+}
+
+.home-tpo__item-thumb {
+    width: 56px;
+    height: 56px;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #F5F5F5;
+}
+
+.home-tpo__item-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.home-tpo__item-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.home-tpo__item-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--home-text-dark);
+    margin-bottom: 4px;
+}
+
+.home-tpo__item-desc {
+    font-size: 12px;
+    color: var(--home-text-gray);
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.home-tpo__item-arrow {
+    color: var(--home-text-light);
+    flex-shrink: 0;
+}
+
+/* 연말 TPO 가이드 (타이틀 없음) */
+.home-tpo--yearend {
+    padding-top: 0;
+}
+
+/* ========== Magazine 섹션 ========== */
+.home-magazine {
+    padding: 0 16px 32px;
+}
+
+.home-magazine__title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--home-text-dark);
+    margin-bottom: 16px;
+}
+
+.home-magazine__banner {
+    overflow: hidden;
+}
+
+.home-magazine__img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ========== Note Guide / Layering Recipes 카드 ========== */
+.home-guide-cards {
+    padding: 0 16px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.home-guide-card {
+    display: block;
+    position: relative;
+    padding: 24px 20px;
+    padding-right: 50px;
+    background: var(--home-bg);
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    text-decoration: none;
+    color: var(--home-text-dark);
+    border: 1px solid #F0EDE8;
+}
+
+.home-guide-card__bar {
+    width: 4px;
+    height: 32px;
+    background: var(--home-brown);
+    border-radius: 2px;
+    position: absolute;
+    top: 24px;
+    left: 20px;
+}
+
+.home-guide-card__content {
+    padding-left: 16px;
+}
+
+.home-guide-card__title {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--home-text-dark);
+    margin-bottom: 10px;
+}
+
+.home-guide-card__desc {
+    font-size: 13px;
+    color: var(--home-text-gray);
+    line-height: 1.6;
+}
+
+.home-guide-card__arrow {
+    color: var(--home-text-light);
+    position: absolute;
+    right: 20px;
+    bottom: 24px;
+}
+
+/* ========== 푸터 ========== */
+.home-footer {
+    background: #F5F5F5;
+    padding: 24px 16px 20px;
+}
+
+.home-footer__info {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.home-footer__col {
+    flex: 1;
+}
+
+.home-footer__heading {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--home-text-dark);
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.home-footer__text {
+    font-size: 11px;
+    color: var(--home-text-gray);
+    line-height: 1.6;
+}
+
+.home-footer__text--highlight {
+    color: var(--home-red);
+}
+
+.home-footer__phone {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--home-text-dark);
+    margin-top: 6px;
+}
+
+.home-footer__sns {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 0;
+    border-top: 1px solid var(--home-border);
+    border-bottom: 1px solid var(--home-border);
+    margin-bottom: 16px;
+}
+
+.home-footer__sns-label {
+    font-size: 11px;
+    color: var(--home-text-gray);
+}
+
+.home-footer__sns-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.home-footer__sns-icon {
+    color: var(--home-text-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-footer__company {
+    margin-bottom: 16px;
+}
+
+.home-footer__company-name {
+    font-size: 11px;
+    color: var(--home-text-gray);
+}
+
+.home-footer__company-email {
+    font-size: 11px;
+    color: var(--home-text-gray);
+    margin-top: 4px;
+}
+
+.home-footer__links {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.home-footer__links a {
+    font-size: 11px;
+    color: var(--home-text-gray);
+    text-decoration: none;
+}
+
+/* ========== 하단 탭바 ========== */
+.home-tabbar-spacer {
+    height: 70px;
+}
+
+.home-tabbar {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 390px;
+    height: 70px;
+    background: #fff;
+    border-top: 1px solid var(--home-border);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: env(safe-area-inset-bottom);
+    z-index: 1000;
+}
+
+.home-tabbar__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    color: var(--home-text-light);
+    font-size: 10px;
+    padding: 8px 12px;
+    transition: color 0.2s ease;
+}
+
+.home-tabbar__item--active {
+    color: var(--home-text-dark);
+}
+
+/* ========== 햄버거 메뉴 오버레이 ========== */
+.home-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 998;
+}
+
+/* 데스크톱: 오버레이를 390px 컨테이너 영역에만 표시 */
+@media screen and (min-width: 391px) {
+    .home-menu-overlay {
+        left: calc(50% - 195px);
+        right: auto;
+        width: 390px;
+    }
+}
+
+.home-menu-overlay--active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ========== 햄버거 메뉴 드로어 ========== */
+.home-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    max-width: 312px;
+    height: 100%;
+    background: #FAF8F5;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
+}
+
+/* 데스크톱: 메뉴를 390px 컨테이너의 왼쪽 끝 기준으로 위치 */
+@media screen and (min-width: 391px) {
+    .home-menu {
+        left: calc(50% - 195px);
+    }
+}
+
+.home-menu--active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.home-menu__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    padding: 0 16px;
+    border-bottom: 1px solid var(--home-border);
+    flex-shrink: 0;
+}
+
+.home-menu__close,
+.home-menu__alarm {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    color: var(--home-text-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-menu__title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--home-text-dark);
+}
+
+.home-menu__scroll {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* 프로필 영역 */
+.home-menu__profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 16px;
+    background: #F0EDE8;
+    border-bottom: 1px solid var(--home-border);
+}
+
+.home-menu__avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #D5E8D4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6B8E6B;
+    flex-shrink: 0;
+}
+
+.home-menu__user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.home-menu__user-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--home-text-dark);
+}
+
+.home-menu__user-email {
+    font-size: 12px;
+    color: var(--home-text-gray);
+}
+
+/* 섹션 공통 */
+.home-menu__section {
+    padding: 20px 16px;
+    border-bottom: 1px solid var(--home-border);
+}
+
+.home-menu__section--last {
+    border-bottom: none;
+}
+
+.home-menu__section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.home-menu__section-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--home-text-dark);
+}
+
+.home-menu__view-all {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    color: var(--home-brown);
+    text-decoration: none;
+}
+
+/* Note 그리드 (2x3) */
+.home-menu__notes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px 12px;
+}
+
+.home-menu__note-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.home-menu__note-thumb {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #E8E4DE;
+    border: 2px solid #E8E4DE;
+}
+
+.home-menu__note-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.home-menu__note-label {
+    font-size: 12px;
+    color: var(--home-text-dark);
+    text-align: center;
+}
+
+/* 리스트 메뉴 */
+.home-menu__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.home-menu__list li {
+    border-bottom: 1px solid #F0EDE8;
+}
+
+.home-menu__list li:last-child {
+    border-bottom: none;
+}
+
+.home-menu__list-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 0;
+    text-decoration: none;
+    color: var(--home-text-dark);
+}
+
+.home-menu__list-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: var(--home-brown);
+    width: 24px;
+}
+
+.home-menu__list-badge {
+    position: absolute;
+    top: -6px;
+    right: -12px;
+    font-size: 8px;
+    font-weight: 700;
+    color: var(--home-red);
+}
+
+.home-menu__list-text {
+    flex: 1;
+    font-size: 14px;
+}
+
+.home-menu__list-arrow {
+    color: var(--home-text-light);
+}
+
+/* 배경 스크롤 잠금 */
+body.menu-open {
+    overflow: hidden;
+}

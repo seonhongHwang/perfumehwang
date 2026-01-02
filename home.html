@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MAISON VERGE</title>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+   <!-- ========== 햄버거 메뉴 오버레이 ========== -->
+    <div class="home-menu-overlay" id="menuOverlay" aria-hidden="true"></div>
+
+    <!-- ========== 햄버거 메뉴 드로어 (80% 폭) ========== -->
+    <aside class="home-menu" id="sideMenu" aria-hidden="true" aria-label="사이드 메뉴">
+        <!-- A. 상단 바 -->
+        <div class="home-menu__header">
+            <button class="home-menu__close" id="menuClose" aria-label="메뉴 닫기">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </button>
+            <h2 class="home-menu__title">Menu</h2>
+            <button class="home-menu__alarm" aria-label="알림">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M18 8C18 6.4 17.4 4.9 16.2 3.8C15.1 2.6 13.6 2 12 2C10.4 2 8.9 2.6 7.8 3.8C6.6 4.9 6 6.4 6 8C6 15 3 17 3 17H21C21 17 18 15 18 8Z" stroke="currentColor" stroke-width="1.5"/><path d="M13.7 21C13.5 21.3 13.3 21.6 13 21.7C12.7 21.9 12.4 22 12 22C11.6 22 11.3 21.9 11 21.7C10.7 21.6 10.4 21.3 10.3 21" stroke="currentColor" stroke-width="1.5"/></svg>
+            </button>
+        </div>
+
+        <!-- 메뉴 스크롤 영역 -->
+        <div class="home-menu__scroll">
+            <!-- B. 유저 프로필 영역 -->
+            <div class="home-menu__profile">
+                <div class="home-menu__avatar">
+                    <!-- 여기 파일명 교체: images/profile.jpg -->
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M20 21V19C20 17.9 19.6 16.9 18.8 16.2C18.1 15.4 17.1 15 16 15H8C6.9 15 5.9 15.4 5.2 16.2C4.4 16.9 4 17.9 4 19V21" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="1.5"/></svg>
+                </div>
+                <div class="home-menu__user-info">
+                    <span class="home-menu__user-name">seonhong Hwang</span>
+                    <span class="home-menu__user-email">hsu3536515@naver.com</span>
+                </div>
+            </div>
+
+            <!-- C. Note 섹션 -->
+            <section class="home-menu__section">
+                <div class="home-menu__section-header">
+                    <h3 class="home-menu__section-title">Note</h3>
+                    <a href="#" class="home-menu__view-all">전체보기 <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5"/></svg></a>
+                </div>
+                <div class="home-menu__notes">
+                    <a href="#" class="home-menu__note-item">
+                        <div class="home-menu__note-thumb"><!-- 여기 파일명 교체: images/note_citrus.jpg --><img src="images/menu/menu1.jpg" alt="시트러스"></div>
+                        <span class="home-menu__note-label">시트러스</span>
+                    </a>
+                    <a href="#" class="home-menu__note-item">
+                        <div class="home-menu__note-thumb"><!-- 여기 파일명 교체: images/note_woody.jpg --><img src="images/menu/menu2.jpg" alt="우디"></div>
+                        <span class="home-menu__note-label">우디</span>
+                    </a>
+                    <a href="#" class="home-menu__note-item">
+                        <div class="home-menu__note-thumb"><!-- 여기 파일명 교체: images/note_musk.jpg --><img src="images/menu/menu3.jpg" alt="머스크"></div>
+                        <span class="home-menu__note-label">머스크</span>
+                    </a>
+                    <a href="#" class="home-menu__note-item">
+                        <div class="home-menu__note-thumb"><!-- 여기 파일명 교체: images/note_cinnamon.jpg --><img src="images/menu/menu4.jpg" alt="시나몬"></div>
+                        <span class="home-menu__note-label">시나몬</span>
+                    </a>
+                    <a href="#" class="home-menu__note-item">
+                        <div class="home-menu__note-thumb"><!-- 여기 파일명 교체: images/note_floral.jpg --><img src="images/menu/menu5.jpg" alt="플로럴"></div>
+                        <span class="home-menu__note-label">플로럴</span>
+                    </a>
+                    <a href="#" class="home-menu__note-item">
+                        <div class="home-menu__note-thumb"><!-- 여기 파일명 교체: images/note_exotic.jpg --><img src="images/menu/menu6.jpg" alt="이국적"></div>
+                        <span class="home-menu__note-label">이국적</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- D. Shop 섹션 -->
+            <section class="home-menu__section">
+                <div class="home-menu__section-header">
+                    <h3 class="home-menu__section-title">Shop</h3>
+                    <a href="#" class="home-menu__view-all">전체보기 <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5"/></svg></a>
+                </div>
+                <ul class="home-menu__list">
+                    <li><a href="#" class="home-menu__list-item">
+                        <span class="home-menu__list-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="1.5"/></svg><span class="home-menu__list-badge">NEW</span></span>
+                        <span class="home-menu__list-text">신상품</span>
+                        <svg class="home-menu__list-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5"/></svg>
+                    </a></li>
+                    <li><a href="#" class="home-menu__list-item">
+                        <span class="home-menu__list-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M14 9V5C14 3.9 13.1 3 12 3C10.9 3 10 3.9 10 5V9" stroke="currentColor" stroke-width="1.5"/><path d="M20 9H4C3.4 9 3 9.4 3 10V11C3 16 6.6 20 12 20C17.4 20 21 16 21 11V10C21 9.4 20.6 9 20 9Z" stroke="currentColor" stroke-width="1.5"/></svg></span>
+                        <span class="home-menu__list-text">인기 제품</span>
+                        <svg class="home-menu__list-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5"/></svg>
+                    </a></li>
+                    <li><a href="#" class="home-menu__list-item">
+                        <span class="home-menu__list-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2V22M17 5H9.5C7 5 6 7 6 8.5C6 10 7 12 9.5 12H14.5C17 12 18 14 18 15.5C18 17 17 19 14.5 19H6" stroke="currentColor" stroke-width="1.5"/></svg></span>
+                        <span class="home-menu__list-text">레이어링</span>
+                        <svg class="home-menu__list-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5"/></svg>
+                    </a></li>
+                    <li><a href="#" class="home-menu__list-item">
+                        <span class="home-menu__list-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M2 12H22M12 2C14.5 4.5 16 8 16 12C16 16 14.5 19.5 12 22C9.5 19.5 8 16 8 12C8 8 9.5 4.5 12 2Z" stroke="currentColor" stroke-width="1.5"/></svg></span>
+                        <span class="home-menu__list-text">글로벌 향수</span>
+                        <svg class="home-menu__list-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5"/></svg>
+                    </a></li>
+                    <li><a href="#" class="home-menu__list-item">
+                        <span class="home-menu__list-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M20.59 13.41L13.42 20.58C13.04 20.96 12.53 21.18 12 21.18C11.47 21.18 10.96 20.96 10.59 20.59L2 12V2H12L20.59 10.59C20.96 10.96 21.17 11.47 21.17 12C21.17 12.53 20.96 13.04 20.59 13.41Z" stroke="currentColor" stroke-width="1.5"/><circle cx="7" cy="7" r="1.5" fill="currentColor"/></svg></span>
+                        <span class="home-menu__list-text">연말 기획 할인</span>
+                        <svg class="home-menu__list-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5"/></svg>
+                    </a></li>
+                </ul>
+            </section>
+
+            <!-- E. Categories & Event 섹션 -->
+            <section class="home-menu__section home-menu__section--last">
+                <div class="home-menu__section-header">
+                    <h3 class="home-menu__section-title">Categories & Event</h3>
+                </div>
+                <ul class="home-menu__list">
+                    <li><a href="#" class="home-menu__list-item">
+                        <span class="home-menu__list-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M20 12V22H4V12M22 7H2V12H22V7ZM12 22V7M12 7H7.5C6.1 7 5 5.9 5 4.5C5 3.1 6.1 2 7.5 2C11 2 12 7 12 7ZM12 7H16.5C17.9 7 19 5.9 19 4.5C19 3.1 17.9 2 16.5 2C13 2 12 7 12 7Z" stroke="currentColor" stroke-width="1.5"/></svg></span>
+                        <span class="home-menu__list-text">선물 & 세트</span>
+                        <svg class="home-menu__list-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5"/></svg>
+                    </a></li>
+                    <li><a href="#" class="home-menu__list-item">
+                        <span class="home-menu__list-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 9L12 2L21 9V20C21 20.5 20.8 21 20.4 21.4C20 21.8 19.5 22 19 22H5C4.5 22 4 21.8 3.6 21.4C3.2 21 3 20.5 3 20V9Z" stroke="currentColor" stroke-width="1.5"/><path d="M9 22V12H15V22" stroke="currentColor" stroke-width="1.5"/></svg></span>
+                        <span class="home-menu__list-text">홈 향수</span>
+                        <svg class="home-menu__list-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5"/></svg>
+                    </a></li>
+                    <li><a href="#" class="home-menu__list-item">
+                        <span class="home-menu__list-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" stroke="currentColor" stroke-width="1.5"/><rect x="14" y="3" width="7" height="7" stroke="currentColor" stroke-width="1.5"/><rect x="3" y="14" width="7" height="7" stroke="currentColor" stroke-width="1.5"/><rect x="14" y="14" width="7" height="7" stroke="currentColor" stroke-width="1.5"/></svg></span>
+                        <span class="home-menu__list-text">매거진</span>
+                        <svg class="home-menu__list-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5"/></svg>
+                    </a></li>
+                    <li><a href="#" class="home-menu__list-item">
+                        <span class="home-menu__list-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21 5H19M21 9H19M21 13H19M3 17L9 11L13 15L21 7" stroke="currentColor" stroke-width="1.5"/><path d="M14 17H21V21H3V17H10" stroke="currentColor" stroke-width="1.5"/></svg></span>
+                        <span class="home-menu__list-text">할인 쿠폰</span>
+                        <svg class="home-menu__list-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5"/></svg>
+                    </a></li>
+                    <li><a href="#" class="home-menu__list-item">
+                        <span class="home-menu__list-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="1.5"/></svg></span>
+                        <span class="home-menu__list-text">이벤트</span>
+                        <svg class="home-menu__list-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5"/></svg>
+                    </a></li>
+                </ul>
+            </section>
+        </div>
+    </aside>
+
+    <main class="home">
+        <!-- ========== A. 상단 헤더 ========== -->
+        <header class="home-header">
+            <button class="home-header__menu" id="menuOpen" aria-label="메뉴 열기" aria-expanded="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="1.5"/>
+                    <line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="1.5"/>
+                    <line x1="3" y1="18" x2="21" y2="18" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+            </button>
+            <a href="home.html"><h1 class="home-header__logo">MAISON VERGE</h1></a>
+            <div class="home-header__icons">
+                <button class="home-header__icon" aria-label="검색">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                        <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.5"/>
+                        <line x1="16" y1="16" x2="21" y2="21" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                </button>
+                <button class="home-header__icon" aria-label="찜하기">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 21C12 21 3 13.5 3 8.5C3 5.42 5.42 3 8.5 3C10.24 3 11.91 3.81 13 5.09C14.09 3.81 15.76 3 17.5 3C20.58 3 23 5.42 23 8.5C23 13.5 14 21 14 21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <a href="cart.html">
+                    <button class="home-header__icon" aria-label="장바구니">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                            <path d="M6 6H22L20 16H8L6 6Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                            <path d="M6 6L5 3H2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="10" cy="20" r="1.5" stroke="currentColor" stroke-width="1.5"/>
+                            <circle cx="18" cy="20" r="1.5" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </button>
+                </a>
+            </div>
+        </header>
+
+        <!-- ========== B. 히어로 배너 슬라이드 ========== -->
+        <section class="home-hero">
+            <div class="home-hero__viewport">
+                <div class="home-hero__track">
+                    <!-- 슬라이드 1 -->
+                    <div class="home-hero__slide">
+                        
+                        <img src="images/home/homevisual1.jpg" alt="히어로 배너 1" class="home-hero__img">
+                        <div class="home-hero__overlay">
+                            <p class="home-hero__text">당신의 일상을</p>
+                            <p class="home-hero__text">이국적인 향으로 <span class="home-hero__text--highlight">아름답게</span> 완성됩니다.</p>
+                        </div>
+                    </div>
+                    <div class="home-hero__slide">
+                        <img src="images/home/homevisual2.jpg" alt="히어로 배너 2" class="home-hero__img">
+                        <div class="home-hero__overlay">
+                            <p class="home-hero__text">향기로 완성되는</p>
+                            <p class="home-hero__text">당신만의 <span class="home-hero__text--highlight">스타일</span></p>
+                        </div>
+                    </div>
+                    <!-- 슬라이드 3 -->
+                    <div class="home-hero__slide">
+                        <video class="home-hero__img"
+                        autoplay muted loop playsinline>
+                        <source src="images/home/visual3.mp4" type="video/mp4">
+                        </video>
+                        <div class="home-hero__overlay">
+                            <p class="home-hero__text">TPO가이드 북이 추천하는 <br> 겨울의향</p>
+                            <p class="home-hero__text"><span class="home-hero__text--highlight">나에게 어울리는 노트를 찾아보세요.</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 인디케이터 -->
+            <div class="home-hero__indicators">
+                <button class="home-hero__dot home-hero__dot--active" data-index="0" aria-label="슬라이드 1"></button>
+                <button class="home-hero__dot" data-index="1" aria-label="슬라이드 2"></button>
+                <button class="home-hero__dot" data-index="2" aria-label="슬라이드 3"></button>
+            </div>
+        </section>
+
+        <!-- ========== C. 카테고리 필터 버튼 ========== -->
+        <section class="home-category">
+            <div class="home-category__buttons">
+                <button class="home-category__btn home-category__btn--active">신제품</button>
+                <button class="home-category__btn">BEST</button>
+                <button class="home-category__btn">향수 1:1추천</button>
+            </div>
+        </section>
+
+        <!-- ========== 메종베르주 제품 슬라이드 ========== -->
+        <section class="home-section home-section--maison">
+            <div class="home-products">
+                <div class="home-products__viewport">
+                    <div class="home-products__track" data-slider="maison">
+                        <!-- 카드 1 -->
+                        <div class="home-products__slide">
+                            <a href="detail.html">
+                                <div class="home-card home-card--maison">
+                                    <div class="home-card__thumb">
+                                        <img src="images/home/firstcard1.jpg" alt="누아르 인텐스 오드퍼퓸">
+                                        <span class="home-card__badge home-card__badge--new">NEW</span>
+                                    </div>
+                                    <div class="home-card__info">
+                                        <span class="home-card__brand">메종베르주</span>
+                                        <h3 class="home-card__name">누아르 인텐스 오드퍼퓸</h3>
+                                        <p class="home-card__name-en">Noir Intense</p>
+                                        <div class="home-card__price-row">
+                                            <span class="home-card__discount">41%</span>
+                                            <span class="home-card__original">177,000원</span>
+                                        </div>
+                                        <span class="home-card__price">105,105원</span>
+                                        <div class="home-card__rating">
+                                            <span class="home-card__star">★</span>
+                                            <span class="home-card__star-score">5</span>
+                                            <span class="home-card__review">리뷰 147</span>
+                                        </div>
+                                        <div class="home-card__actions">
+                                            <button class="home-card__action" aria-label="찜하기">
+                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 21C12 21 3 13.5 3 8.5C3 5.42 5.42 3 8.5 3C10.24 3 11.91 3.81 13 5.09C14.09 3.81 15.76 3 17.5 3C20.58 3 23 5.42 23 8.5C23 13.5 14 21 14 21" stroke="currentColor" stroke-width="1.5"/></svg>
+                                            </button>
+                                            <button class="home-card__action" aria-label="공유">
+                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="18" cy="5" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="6" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="19" r="3" stroke="currentColor" stroke-width="1.5"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49" stroke="currentColor" stroke-width="1.5"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49" stroke="currentColor" stroke-width="1.5"/></svg>
+                                            </button>
+                                            <button class="home-card__action" aria-label="장바구니">
+                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 6H22L20 16H8L6 6Z" stroke="currentColor" stroke-width="1.5"/><path d="M6 6L5 3H2" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="20" r="1.5" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="20" r="1.5" stroke="currentColor" stroke-width="1.5"/></svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- 카드 2 -->
+                        <div class="home-products__slide">
+                            <div class="home-card home-card--maison">
+                                <div class="home-card__thumb">
+                                    <img src="images/home/firstcard2.jpg" alt="오벨 라벨 오드 퍼퓸">
+                                    <span class="home-card__badge home-card__badge--best">BEST</span>
+                                </div>
+                                <div class="home-card__info">
+                                    <span class="home-card__brand">메종베르주</span>
+                                    <h3 class="home-card__name">오벨 라벨 오드 퍼퓸</h3>
+                                    <p class="home-card__name-en">obeol label</p>
+                                    <div class="home-card__price-row">
+                                        <span class="home-card__discount">45%</span>
+                                        <span class="home-card__original">159,000원</span>
+                                    </div>
+                                    <span class="home-card__price">87,450원</span>
+                                    <div class="home-card__rating">
+                                        <span class="home-card__star home-card__star--gold">★</span>
+                                        <span class="home-card__star-score">4.9</span>
+                                        <span class="home-card__review">리뷰 107</span>
+                                    </div>
+                                    <div class="home-card__actions">
+                                        <button class="home-card__action" aria-label="찜하기">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 21C12 21 3 13.5 3 8.5C3 5.42 5.42 3 8.5 3C10.24 3 11.91 3.81 13 5.09C14.09 3.81 15.76 3 17.5 3C20.58 3 23 5.42 23 8.5C23 13.5 14 21 14 21" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        </button>
+                                        <button class="home-card__action" aria-label="공유">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="18" cy="5" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="6" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="19" r="3" stroke="currentColor" stroke-width="1.5"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49" stroke="currentColor" stroke-width="1.5"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        </button>
+                                        <button class="home-card__action" aria-label="장바구니">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 6H22L20 16H8L6 6Z" stroke="currentColor" stroke-width="1.5"/><path d="M6 6L5 3H2" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="20" r="1.5" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="20" r="1.5" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 카드 3 -->
+                        <div class="home-products__slide">
+                            <div class="home-card home-card--maison">
+                                <div class="home-card__thumb">
+                                    <img src="images/home/firstcard3.jpg" alt="골드 앰버 라임">
+                                    <span class="home-card__badge home-card__badge--new">NEW</span>
+                                </div>
+                                <div class="home-card__info">
+                                    <span class="home-card__brand">메종베르주</span>
+                                    <h3 class="home-card__name">골드 앰버 라임</h3>
+                                    <p class="home-card__name-en">Gold Amber lime</p>
+                                    <div class="home-card__price-row">
+                                        <span class="home-card__discount">37%</span>
+                                        <span class="home-card__original">135,000원</span>
+                                    </div>
+                                    <span class="home-card__price">84,900원</span>
+                                    <div class="home-card__rating">
+                                        <span class="home-card__star">★</span>
+                                        <span class="home-card__star-score">5</span>
+                                        <span class="home-card__review">리뷰 113</span>
+                                    </div>
+                                    <div class="home-card__actions">
+                                        <button class="home-card__action" aria-label="찜하기">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 21C12 21 3 13.5 3 8.5C3 5.42 5.42 3 8.5 3C10.24 3 11.91 3.81 13 5.09C14.09 3.81 15.76 3 17.5 3C20.58 3 23 5.42 23 8.5C23 13.5 14 21 14 21" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        </button>
+                                        <button class="home-card__action" aria-label="공유">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="18" cy="5" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="6" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="19" r="3" stroke="currentColor" stroke-width="1.5"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49" stroke="currentColor" stroke-width="1.5"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        </button>
+                                        <button class="home-card__action" aria-label="장바구니">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 6H22L20 16H8L6 6Z" stroke="currentColor" stroke-width="1.5"/><path d="M6 6L5 3H2" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="20" r="1.5" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="20" r="1.5" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== D. 중간 가로 배너 카드 ========== -->
+        <section class="home-banner">
+            <a href="#" class="home-banner__card">
+                <span class="home-banner__text">글로벌 맞춤형 향수</span>
+                <svg class="home-banner__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </section>
+
+        <!-- ========== DIPTYQUE 제품 슬라이드 ========== -->
+        <section class="home-section home-section--diptyque">
+            <h2 class="home-section__title">DIPTYQUE</h2>
+            <div class="home-products home-products--diptyque">
+                <div class="home-products__viewport">
+                    <div class="home-products__track" data-slider="diptyque">
+                        <!-- 딥디크 카드 1 -->
+                        <div class="home-products__slide">
+                            <div class="home-card home-card--diptyque">
+                                <div class="home-card__thumb home-card__thumb--diptyque">
+                                    <!-- 여기 파일명 교체: images/diptyque-1.jpg -->
+                                    <img src="images/home/twocard1.png" alt="도손 오 드 뚜왈렛">
+                                </div>
+                                <div class="home-card__info">
+                                    <span class="home-card__brand">딥디크</span>
+                                    <h3 class="home-card__name">도손 오 드 뚜왈렛</h3>
+                                    <p class="home-card__name-en">doson o deu ttuwalles</p>
+                                    <p class="home-card__desc">몽환적인 느낌의 은은한 머스크</p>
+                                    <div class="home-card__rating">
+                                        <span class="home-card__stars">★★★★★</span>
+                                        <span class="home-card__review-count">(334)</span>
+                                    </div>
+                                    <div class="home-card__price-row">
+                                        <span class="home-card__original">183,000원</span>
+                                    </div>
+                                    <div class="home-card__final-price">
+                                        <span class="home-card__discount">20%</span>
+                                        <span class="home-card__price">145,800원</span>
+                                    </div>
+                                    <div class="home-card__actions">
+                                        <button class="home-card__action" aria-label="찜하기">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 21C12 21 3 13.5 3 8.5C3 5.42 5.42 3 8.5 3C10.24 3 11.91 3.81 13 5.09C14.09 3.81 15.76 3 17.5 3C20.58 3 23 5.42 23 8.5C23 13.5 14 21 14 21" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        </button>
+                                        <button class="home-card__action" aria-label="공유">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="18" cy="5" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="6" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="19" r="3" stroke="currentColor" stroke-width="1.5"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49" stroke="currentColor" stroke-width="1.5"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        </button>
+                                        <button class="home-card__action" aria-label="장바구니">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 6H22L20 16H8L6 6Z" stroke="currentColor" stroke-width="1.5"/><path d="M6 6L5 3H2" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="20" r="1.5" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="20" r="1.5" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 딥디크 카드 2 -->
+                        <div class="home-products__slide">
+                            <div class="home-card home-card--diptyque">
+                                <div class="home-card__thumb home-card__thumb--diptyque">
+                                    <!-- 여기 파일명 교체: images/diptyque-2.jpg -->
+                                    <img src="images/home/twocard2.png" alt="오르페옹 오드 퍼퓸">
+                                </div>
+                                <div class="home-card__info">
+                                    <span class="home-card__brand">딥디크</span>
+                                    <h3 class="home-card__name">오르페옹 오드 퍼퓸</h3>
+                                    <p class="home-card__name-en">oleupe-ong odeu peopyum</p>
+                                    <p class="home-card__desc">숲의 포근함과 우디 머스크</p>
+                                    <div class="home-card__rating">
+                                        <span class="home-card__stars">★★★★★</span>
+                                        <span class="home-card__review-count">(474)</span>
+                                    </div>
+                                    <div class="home-card__price-row">
+                                        <span class="home-card__original">289,000원</span>
+                                    </div>
+                                    <div class="home-card__final-price">
+                                        <span class="home-card__discount">20%</span>
+                                        <span class="home-card__price">229,800원</span>
+                                    </div>
+                                    <div class="home-card__actions">
+                                        <button class="home-card__action" aria-label="찜하기">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 21C12 21 3 13.5 3 8.5C3 5.42 5.42 3 8.5 3C10.24 3 11.91 3.81 13 5.09C14.09 3.81 15.76 3 17.5 3C20.58 3 23 5.42 23 8.5C23 13.5 14 21 14 21" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        </button>
+                                        <button class="home-card__action" aria-label="공유">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="18" cy="5" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="6" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="19" r="3" stroke="currentColor" stroke-width="1.5"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49" stroke="currentColor" stroke-width="1.5"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        </button>
+                                        <button class="home-card__action" aria-label="장바구니">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 6H22L20 16H8L6 6Z" stroke="currentColor" stroke-width="1.5"/><path d="M6 6L5 3H2" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="20" r="1.5" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="20" r="1.5" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 딥디크 카드 3 -->
+                        <div class="home-products__slide">
+                            <div class="home-card home-card--diptyque">
+                                <div class="home-card__thumb home-card__thumb--diptyque">
+                                    <img src="images/home/twocard3.png" alt="로즈 오 드 뚜왈렛">
+                                </div>
+                                <div class="home-card__info">
+                                    <span class="home-card__brand">딥디크</span>
+                                    <h3 class="home-card__name">로즈 오 드 뚜왈렛</h3>
+                                    <p class="home-card__name-en">rose o deu ttuwalles</p>
+                                    <p class="home-card__desc">세상 깔끔한 생장미 싱그러운 향</p>
+                                    <div class="home-card__rating">
+                                        <span class="home-card__stars">★★★★★</span>
+                                        <span class="home-card__review-count">(334)</span>
+                                    </div>
+                                    <div class="home-card__price-row">
+                                        <span class="home-card__original">183,000원</span>
+                                    </div>
+                                    <div class="home-card__final-price">
+                                        <span class="home-card__discount">20%</span>
+                                        <span class="home-card__price">145,800원</span>
+                                    </div>
+                                    <div class="home-card__actions">
+                                        <button class="home-card__action" aria-label="찜하기">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 21C12 21 3 13.5 3 8.5C3 5.42 5.42 3 8.5 3C10.24 3 11.91 3.81 13 5.09C14.09 3.81 15.76 3 17.5 3C20.58 3 23 5.42 23 8.5C23 13.5 14 21 14 21" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        </button>
+                                        <button class="home-card__action" aria-label="공유">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="18" cy="5" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="6" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="19" r="3" stroke="currentColor" stroke-width="1.5"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49" stroke="currentColor" stroke-width="1.5"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        </button>
+                                        <button class="home-card__action" aria-label="장바구니">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 6H22L20 16H8L6 6Z" stroke="currentColor" stroke-width="1.5"/><path d="M6 6L5 3H2" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="20" r="1.5" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="20" r="1.5" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== TOMFORD 제품 슬라이드 ========== -->
+        <section class="home-section home-section--tomford">
+            <h2 class="home-section__title">TOMFORD</h2>
+            <div class="home-products home-products--tomford">
+                <div class="home-products__viewport">
+                    <div class="home-products__track" data-slider="tomford">
+                        <!-- 톰포드 카드 1 -->
+                        <div class="home-products__slide">
+                            <div class="home-card home-card--tomford">
+                                <div class="home-card__thumb home-card__thumb--tomford">
+                                    <img src="images/home/three1.png" alt="화이트 스웨이드 오드 퍼퓸">
+                                </div>
+                                <div class="home-card__info">
+                                    <span class="home-card__brand">톰포드</span>
+                                    <h3 class="home-card__name">화이트 스웨이드 오드 퍼퓸</h3>
+                                    <p class="home-card__name-en">White Suede Eau de Parfum</p>
+                                    <p class="home-card__desc">하얀 채취와 여운 머스크 향기</p>
+                                    <div class="home-card__rating">
+                                        <span class="home-card__stars">★★★★★</span>
+                                        <span class="home-card__review-count">(334)</span>
+                                    </div>
+                                    <div class="home-card__price-row">
+                                        <span class="home-card__original">233,000원</span>
+                                    </div>
+                                    <div class="home-card__final-price">
+                                        <span class="home-card__discount">30%</span>
+                                        <span class="home-card__price">163,100원</span>
+                                    </div>
+                                    <div class="home-card__actions">
+                                        <button class="home-card__action" aria-label="찜하기">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 21C12 21 3 13.5 3 8.5C3 5.42 5.42 3 8.5 3C10.24 3 11.91 3.81 13 5.09C14.09 3.81 15.76 3 17.5 3C20.58 3 23 5.42 23 8.5C23 13.5 14 21 14 21" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        </button>
+                                        <button class="home-card__action" aria-label="공유">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="18" cy="5" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="6" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="19" r="3" stroke="currentColor" stroke-width="1.5"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49" stroke="currentColor" stroke-width="1.5"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        </button>
+                                        <button class="home-card__action" aria-label="장바구니">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 6H22L20 16H8L6 6Z" stroke="currentColor" stroke-width="1.5"/><path d="M6 6L5 3H2" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="20" r="1.5" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="20" r="1.5" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 톰포드 카드 2 -->
+                        <div class="home-products__slide">
+                            <div class="home-card home-card--tomford">
+                                <div class="home-card__thumb home-card__thumb--tomford">
+                                    
+                                    <img src="images/home/three2.png" alt="부아 마로캉 오드 퍼퓸">
+                                </div>
+                                <div class="home-card__info">
+                                    <span class="home-card__brand">톰포드</span>
+                                    <h3 class="home-card__name">부아 마로캉 오드 퍼퓸</h3>
+                                    <p class="home-card__name-en">White Suede Eau de Parfum</p>
+                                    <p class="home-card__desc">자극적인 우디 시트르 향기</p>
+                                    <div class="home-card__rating">
+                                        <span class="home-card__stars">★★★★★</span>
+                                        <span class="home-card__review-count">(157)</span>
+                                    </div>
+                                    <div class="home-card__price-row">
+                                        <span class="home-card__original">250,000원</span>
+                                    </div>
+                                    <div class="home-card__final-price">
+                                        <span class="home-card__discount">20%</span>
+                                        <span class="home-card__price">200,000원</span>
+                                    </div>
+                                    <div class="home-card__actions">
+                                        <button class="home-card__action" aria-label="찜하기">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 21C12 21 3 13.5 3 8.5C3 5.42 5.42 3 8.5 3C10.24 3 11.91 3.81 13 5.09C14.09 3.81 15.76 3 17.5 3C20.58 3 23 5.42 23 8.5C23 13.5 14 21 14 21" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        </button>
+                                        <button class="home-card__action" aria-label="공유">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="18" cy="5" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="6" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="19" r="3" stroke="currentColor" stroke-width="1.5"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49" stroke="currentColor" stroke-width="1.5"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        </button>
+                                        <button class="home-card__action" aria-label="장바구니">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 6H22L20 16H8L6 6Z" stroke="currentColor" stroke-width="1.5"/><path d="M6 6L5 3H2" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="20" r="1.5" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="20" r="1.5" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 톰포드 카드 3 -->
+                        <div class="home-products__slide">
+                            <div class="home-card home-card--tomford">
+                                <div class="home-card__thumb home-card__thumb--tomford">
+                                    <!-- 여기 파일명 교체: images/tomford-3.jpg -->
+                                    <img src="images/home/three3.png" alt="만다리노 오드 퍼퓸">
+                                </div>
+                                <div class="home-card__info">
+                                    <span class="home-card__brand">톰포드</span>
+                                    <h3 class="home-card__name">만다리노 오드 퍼퓸</h3>
+                                    <p class="home-card__name-en">mandarino Eau de Parfum</p>
+                                    <p class="home-card__desc">전원적인 분위기를 담은 감귤 향기</p>
+                                    <div class="home-card__rating">
+                                        <span class="home-card__stars">★★★★★</span>
+                                        <span class="home-card__review-count">(225)</span>
+                                    </div>
+                                    <div class="home-card__price-row">
+                                        <span class="home-card__original">230,000원</span>
+                                    </div>
+                                    <div class="home-card__final-price">
+                                        <span class="home-card__discount">25%</span>
+                                        <span class="home-card__price">172,500원</span>
+                                    </div>
+                                    <div class="home-card__actions">
+                                        <button class="home-card__action" aria-label="찜하기">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 21C12 21 3 13.5 3 8.5C3 5.42 5.42 3 8.5 3C10.24 3 11.91 3.81 13 5.09C14.09 3.81 15.76 3 17.5 3C20.58 3 23 5.42 23 8.5C23 13.5 14 21 14 21" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        </button>
+                                        <button class="home-card__action" aria-label="공유">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="18" cy="5" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="6" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="19" r="3" stroke="currentColor" stroke-width="1.5"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49" stroke="currentColor" stroke-width="1.5"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        </button>
+                                        <button class="home-card__action" aria-label="장바구니">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 6H22L20 16H8L6 6Z" stroke="currentColor" stroke-width="1.5"/><path d="M6 6L5 3H2" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="20" r="1.5" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="20" r="1.5" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 톰포드 카드 4 -->
+                        <div class="home-products__slide">
+                            <div class="home-card home-card--tomford">
+                                <div class="home-card__thumb home-card__thumb--tomford">
+                                    <!-- 여기 파일명 교체: images/tomford-4.jpg -->
+                                    <img src="images/home/three4.png" alt="코스타 아주라 오드 퍼퓸">
+                                </div>
+                                <div class="home-card__info">
+                                    <span class="home-card__brand">톰포드</span>
+                                    <h3 class="home-card__name">코스타 아주라 오드 퍼퓸</h3>
+                                    <p class="home-card__name-en">Costa Azura Parfum</p>
+                                    <p class="home-card__desc">지중해의 휴양을 연상시키는 향기</p>
+                                    <div class="home-card__rating">
+                                        <span class="home-card__stars">★★★★★</span>
+                                        <span class="home-card__review-count">(149)</span>
+                                    </div>
+                                    <div class="home-card__price-row">
+                                        <span class="home-card__original">250,000원</span>
+                                    </div>
+                                    <div class="home-card__final-price">
+                                        <span class="home-card__discount">20%</span>
+                                        <span class="home-card__price">200,000원</span>
+                                    </div>
+                                    <div class="home-card__actions">
+                                        <button class="home-card__action" aria-label="찜하기">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 21C12 21 3 13.5 3 8.5C3 5.42 5.42 3 8.5 3C10.24 3 11.91 3.81 13 5.09C14.09 3.81 15.76 3 17.5 3C20.58 3 23 5.42 23 8.5C23 13.5 14 21 14 21" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        </button>
+                                        <button class="home-card__action" aria-label="공유">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="18" cy="5" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="6" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="19" r="3" stroke="currentColor" stroke-width="1.5"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49" stroke="currentColor" stroke-width="1.5"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        </button>
+                                        <button class="home-card__action" aria-label="장바구니">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 6H22L20 16H8L6 6Z" stroke="currentColor" stroke-width="1.5"/><path d="M6 6L5 3H2" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="20" r="1.5" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="20" r="1.5" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== BJÖRK AND BERRIES 제품 슬라이드 ========== -->
+        <section class="home-section home-section--bjork">
+            <h2 class="home-section__title">BJÖRK AND BERRIES</h2>
+            <div class="home-products home-products--bjork">
+                <div class="home-products__viewport">
+                    <div class="home-products__track" data-slider="bjork">
+                        <!-- 비요크 카드 1 -->
+                        <div class="home-products__slide">
+                            <div class="home-card home-card--bjork">
+                                <div class="home-card__thumb home-card__thumb--bjork">
+                                    <!-- 여기 파일명 교체: images/bjork-1.jpg -->
+                                    <img src="images/home/four1.jpg" alt="피알쉐 오드 퍼퓸">
+                                </div>
+                                <div class="home-card__info">
+                                    <span class="home-card__brand">비요크 앤 베리스</span>
+                                    <h3 class="home-card__name">피알쉐 오드 퍼퓸</h3>
+                                    <p class="home-card__name-en">Fjallsjo Eau de Parfum</p>
+                                    <p class="home-card__desc">스웨덴 호수느낌 깨끗한 실키 향</p>
+                                    <div class="home-card__rating">
+                                        <span class="home-card__stars">★★★★★</span>
+                                        <span class="home-card__review-count">(501)</span>
+                                    </div>
+                                    <div class="home-card__price-row">
+                                        <span class="home-card__original">125,000원</span>
+                                    </div>
+                                    <div class="home-card__final-price">
+                                        <span class="home-card__discount">20%</span>
+                                        <span class="home-card__price">100,000원</span>
+                                    </div>
+                                    <div class="home-card__actions">
+                                        <button class="home-card__action" aria-label="찜하기">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 21C12 21 3 13.5 3 8.5C3 5.42 5.42 3 8.5 3C10.24 3 11.91 3.81 13 5.09C14.09 3.81 15.76 3 17.5 3C20.58 3 23 5.42 23 8.5C23 13.5 14 21 14 21" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        </button>
+                                        <button class="home-card__action" aria-label="공유">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="18" cy="5" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="6" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="19" r="3" stroke="currentColor" stroke-width="1.5"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49" stroke="currentColor" stroke-width="1.5"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        </button>
+                                        <button class="home-card__action" aria-label="장바구니">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 6H22L20 16H8L6 6Z" stroke="currentColor" stroke-width="1.5"/><path d="M6 6L5 3H2" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="20" r="1.5" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="20" r="1.5" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 비요크 카드 2 -->
+                        <div class="home-products__slide">
+                            <div class="home-card home-card--bjork">
+                                <div class="home-card__thumb home-card__thumb--bjork">
+                                    <!-- 여기 파일명 교체: images/bjork-2.jpg -->
+                                    <img src="images/home/four2.jpg" alt="바닐라 베일 오드 퍼퓸">
+                                </div>
+                                <div class="home-card__info">
+                                    <span class="home-card__brand">비요크 앤 베리스</span>
+                                    <h3 class="home-card__name">바닐라 베일 오드 퍼퓸</h3>
+                                    <p class="home-card__name-en">vanilla veil Eau de Parfum</p>
+                                    <p class="home-card__desc">아몬드 꽃이 연상되는 달콤한 향</p>
+                                    <div class="home-card__rating">
+                                        <span class="home-card__stars">★★★★★</span>
+                                        <span class="home-card__review-count">(437)</span>
+                                    </div>
+                                    <div class="home-card__price-row">
+                                        <span class="home-card__original">125,000원</span>
+                                    </div>
+                                    <div class="home-card__final-price">
+                                        <span class="home-card__discount">10%</span>
+                                        <span class="home-card__price">112,500원</span>
+                                    </div>
+                                    <div class="home-card__actions">
+                                        <button class="home-card__action" aria-label="찜하기">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 21C12 21 3 13.5 3 8.5C3 5.42 5.42 3 8.5 3C10.24 3 11.91 3.81 13 5.09C14.09 3.81 15.76 3 17.5 3C20.58 3 23 5.42 23 8.5C23 13.5 14 21 14 21" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        </button>
+                                        <button class="home-card__action" aria-label="공유">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="18" cy="5" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="6" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="19" r="3" stroke="currentColor" stroke-width="1.5"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49" stroke="currentColor" stroke-width="1.5"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        </button>
+                                        <button class="home-card__action" aria-label="장바구니">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 6H22L20 16H8L6 6Z" stroke="currentColor" stroke-width="1.5"/><path d="M6 6L5 3H2" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="20" r="1.5" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="20" r="1.5" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 비요크 카드 3 -->
+                        <div class="home-products__slide">
+                            <div class="home-card home-card--bjork">
+                                <div class="home-card__thumb home-card__thumb--bjork">
+                                    <!-- 여기 파일명 교체: images/bjork-3.jpg -->
+                                    <img src="images/home/four3.jpg" alt="화이트 포레스트 오드 퍼퓸">
+                                </div>
+                                <div class="home-card__info">
+                                    <span class="home-card__brand">비요크 앤 베리스</span>
+                                    <h3 class="home-card__name">화이트 포레스트 퍼퓸</h3>
+                                    <p class="home-card__name-en">white forest Eau de Parfum</p>
+                                    <p class="home-card__desc">북유럽 자연의 정수를 담아낸 향</p>
+                                    <div class="home-card__rating">
+                                        <span class="home-card__stars">★★★★★</span>
+                                        <span class="home-card__review-count">(249)</span>
+                                    </div>
+                                    <div class="home-card__price-row">
+                                        <span class="home-card__original">125,000원</span>
+                                    </div>
+                                    <div class="home-card__final-price">
+                                        <span class="home-card__discount">10%</span>
+                                        <span class="home-card__price">112,500원</span>
+                                    </div>
+                                    <div class="home-card__actions">
+                                        <button class="home-card__action" aria-label="찜하기">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 21C12 21 3 13.5 3 8.5C3 5.42 5.42 3 8.5 3C10.24 3 11.91 3.81 13 5.09C14.09 3.81 15.76 3 17.5 3C20.58 3 23 5.42 23 8.5C23 13.5 14 21 14 21" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        </button>
+                                        <button class="home-card__action" aria-label="공유">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="18" cy="5" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="6" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="19" r="3" stroke="currentColor" stroke-width="1.5"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49" stroke="currentColor" stroke-width="1.5"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        </button>
+                                        <button class="home-card__action" aria-label="장바구니">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 6H22L20 16H8L6 6Z" stroke="currentColor" stroke-width="1.5"/><path d="M6 6L5 3H2" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="20" r="1.5" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="20" r="1.5" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 비요크 카드 4 -->
+                        <div class="home-products__slide">
+                            <div class="home-card home-card--bjork">
+                                <div class="home-card__thumb home-card__thumb--bjork">
+                                    <!-- 여기 파일명 교체: images/bjork-4.jpg -->
+                                    <img src="images/home/four4.jpg" alt="바이올렛 스카이 오드 퍼퓸">
+                                </div>
+                                <div class="home-card__info">
+                                    <span class="home-card__brand">비요크 앤 베리스</span>
+                                    <h3 class="home-card__name">바이올렛 스카이 퍼퓸</h3>
+                                    <p class="home-card__name-en">violet sky Eau de Parfum</p>
+                                    <p class="home-card__desc">보랏빛 하늘이 연상되는 은은한 향</p>
+                                    <div class="home-card__rating">
+                                        <span class="home-card__stars">★★★★★</span>
+                                        <span class="home-card__review-count">(312)</span>
+                                    </div>
+                                    <div class="home-card__price-row">
+                                        <span class="home-card__original">125,000원</span>
+                                    </div>
+                                    <div class="home-card__final-price">
+                                        <span class="home-card__discount">10%</span>
+                                        <span class="home-card__price">112,500원</span>
+                                    </div>
+                                    <div class="home-card__actions">
+                                        <button class="home-card__action" aria-label="찜하기">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 21C12 21 3 13.5 3 8.5C3 5.42 5.42 3 8.5 3C10.24 3 11.91 3.81 13 5.09C14.09 3.81 15.76 3 17.5 3C20.58 3 23 5.42 23 8.5C23 13.5 14 21 14 21" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        </button>
+                                        <button class="home-card__action" aria-label="공유">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="18" cy="5" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="6" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="19" r="3" stroke="currentColor" stroke-width="1.5"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49" stroke="currentColor" stroke-width="1.5"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        </button>
+                                        <button class="home-card__action" aria-label="장바구니">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 6H22L20 16H8L6 6Z" stroke="currentColor" stroke-width="1.5"/><path d="M6 6L5 3H2" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="20" r="1.5" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="20" r="1.5" stroke="currentColor" stroke-width="1.5"/></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== A. TPO 가이드북 섹션 ========== -->
+        <section class="home-tpo">
+            <h2 class="home-tpo__title">TPO 가이드북</h2>
+            <a href="#" class="home-tpo__banner">
+                <!-- 여기 파일명 교체: images/tpo-banner-1.jpg -->
+                <img src="images/home/tpomain1.jpg" alt="TPO 가이드북 배너" class="home-tpo__banner-img">
+                <div class="home-tpo__banner-overlay">
+                    <p class="home-tpo__banner-text">두 사람의 TPO, 한 병의 스토리</p>
+                    <p class="home-tpo__banner-sub">커뮤니티 공유 공간</p>
+                </div>
+            </a>
+            <div class="home-tpo__list">
+                <a href="#" class="home-tpo__item">
+                    <div class="home-tpo__item-thumb">
+                        <!-- 여기 파일명 교체: images/tpo-first-date.jpg -->
+                        <img src="images/home/five1-1.png" alt="첫데이트">
+                    </div>
+                    <div class="home-tpo__item-content">
+                        <h3 class="home-tpo__item-title">첫데이트</h3>
+                        <p class="home-tpo__item-desc">깨끗하고 가벼운 시트러스 머스크<br>가까워지고 싶은 소프트 실리지 팁</p>
+                    </div>
+                    <span class="home-tpo__item-arrow">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5"/></svg>
+                    </span>
+                </a>
+                <a href="#" class="home-tpo__item">
+                    <div class="home-tpo__item-thumb">
+                        <!-- 여기 파일명 교체: images/tpo-anniversary.jpg -->
+                        <img src="images/home/five1-2.jpg" alt="기념일">
+                    </div>
+                    <div class="home-tpo__item-content">
+                        <h3 class="home-tpo__item-title">기념일</h3>
+                        <p class="home-tpo__item-desc">우디·앰버·바닐라<br>달콤한 잔향 오래 남기는 실리지 팁</p>
+                    </div>
+                    <span class="home-tpo__item-arrow">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5"/></svg>
+                    </span>
+                </a>
+                <a href="#" class="home-tpo__item">
+                    <div class="home-tpo__item-thumb">
+                        <!-- 여기 파일명 교체: images/tpo-rainy.jpg -->
+                        <img src="images/home/five1-3.jpg" alt="비오는 날">
+                    </div>
+                    <div class="home-tpo__item-content">
+                        <h3 class="home-tpo__item-title">비오는 날</h3>
+                        <p class="home-tpo__item-desc">포근한 머스크·아이리스<br>우산 트렌드 미세 공간용 실리지 팁</p>
+                    </div>
+                    <span class="home-tpo__item-arrow">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5"/></svg>
+                    </span>
+                </a>
+            </div>
+        </section>
+
+        <!-- ========== B. 연말 TPO 가이드 섹션 ========== -->
+        <section class="home-tpo home-tpo--yearend">
+            <a href="#" class="home-tpo__banner">
+                <!-- 여기 파일명 교체: images/tpo-yearend-banner.jpg -->
+                <img src="images/home/tpomain2.jpg" alt="연말 TPO 가이드 배너" class="home-tpo__banner-img">
+                <div class="home-tpo__banner-overlay">
+                    <p class="home-tpo__banner-text">연말 TPO 가이드 & 커플 레이어링 레시피</p>
+                    <p class="home-tpo__banner-sub">커뮤니티에서 바로 공유해요</p>
+                </div>
+            </a>
+            <div class="home-tpo__list">
+                <a href="#" class="home-tpo__item">
+                    <div class="home-tpo__item-thumb">
+                        <!-- 여기 파일명 교체: images/tpo-tree.jpg -->
+                        <img src="images/home/six1-1.jpg" alt="트리 라이트업">
+                    </div>
+                    <div class="home-tpo__item-content">
+                        <h3 class="home-tpo__item-title">트리 라이트업</h3>
+                        <p class="home-tpo__item-desc">바닐라·앰버·시나몬향의 달달한 노트<br>로맨틱한 하루를 보내보세요!</p>
+                    </div>
+                    <span class="home-tpo__item-arrow">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5"/></svg>
+                    </span>
+                </a>
+                <a href="#" class="home-tpo__item">
+                    <div class="home-tpo__item-thumb">
+                        <!-- 여기 파일명 교체: images/tpo-office.jpg -->
+                        <img src="images/home/six1-2.jpg" alt="연말 모임">
+                    </div>
+                    <div class="home-tpo__item-content">
+                        <h3 class="home-tpo__item-title">연말 모임 (오피스 파티)</h3>
+                        <p class="home-tpo__item-desc">아이리스·머스크·시더향의 과하지 않은 노트<br>잊지못할 연말 모임을 가져보세요!</p>
+                    </div>
+                    <span class="home-tpo__item-arrow">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5"/></svg>
+                    </span>
+                </a>
+                <a href="#" class="home-tpo__item">
+                    <div class="home-tpo__item-thumb">
+                        <!-- 여기 파일명 교체: images/tpo-couple.jpg -->
+                        <img src="images/home/six1-3.jpg" alt="커플 홈무드">
+                    </div>
+                    <div class="home-tpo__item-content">
+                        <h3 class="home-tpo__item-title">커플 홈무드 & 선물 교환</h3>
+                        <p class="home-tpo__item-desc">밀크·마시멜로·머스크향의 달콤한 노트<br>특별한 홈파티를 즐겨보세요!</p>
+                    </div>
+                    <span class="home-tpo__item-arrow">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5"/></svg>
+                    </span>
+                </a>
+            </div>
+        </section>
+
+        <!-- ========== C. Magazine 섹션 ========== -->
+        <section class="home-magazine">
+            <h2 class="home-magazine__title">Magazine</h2>
+            <div class="home-magazine__banner">
+                <!-- 여기 파일명 교체: images/magazine-banner.jpg -->
+                <img src="images/home/seven1.jpg" alt="Magazine 배너" class="home-magazine__img">
+            </div>
+        </section>
+
+        <!-- ========== D. Note Guide / Layering Recipes 카드 ========== -->
+        <section class="home-guide-cards">
+            <a href="#" class="home-guide-card">
+                <div class="home-guide-card__bar"></div>
+                <div class="home-guide-card__content">
+                    <h3 class="home-guide-card__title">Note Guide</h3>
+                    <p class="home-guide-card__desc">시트러스, 플로럴, 우디 노트의 차이점을 알아보세요.<br>당신의 기분과 계절에 맞는 향을 찾아보세요.</p>
+                </div>
+                <span class="home-guide-card__arrow">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5"/></svg>
+                </span>
+            </a>
+            <a href="#" class="home-guide-card">
+                <div class="home-guide-card__bar"></div>
+                <div class="home-guide-card__content">
+                    <h3 class="home-guide-card__title">Layering Recipes</h3>
+                    <p class="home-guide-card__desc">아침의 상쾌함부터 저녁의 깊이까지,<br>향기 레이어링의 예술을 시작해보세요.<br>일상 속과 특별한 시간까지</p>
+                </div>
+                <span class="home-guide-card__arrow">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5"/></svg>
+                </span>
+            </a>
+        </section>
+
+        <!-- ========== E. 푸터 ========== -->
+        <footer class="home-footer">
+            <div class="home-footer__info">
+                <div class="home-footer__col">
+                    <h4 class="home-footer__heading">CUSTOMER SERVICE</h4>
+                    <p class="home-footer__text">평일 11:00 ~ 16:00</p>
+                    <p class="home-footer__text">점심시간 13:00-14:00</p>
+                    <p class="home-footer__text home-footer__text--highlight">주말 및 공휴일 휴무</p>
+                    <p class="home-footer__phone">📞 070-7424-1253</p>
+                </div>
+                <div class="home-footer__col">
+                    <h4 class="home-footer__heading">OFFLINE STORE</h4>
+                    <p class="home-footer__text">평요일 15:00 ~ 20:30</p>
+                    <p class="home-footer__text">토~일 12:00 ~ 20:30</p>
+                    <p class="home-footer__text home-footer__text--highlight">격주 화요일 휴무</p>
+                    <p class="home-footer__phone">📞 070-4166-9121</p>
+                </div>
+            </div>
+            <div class="home-footer__sns">
+                <span class="home-footer__sns-label">향으로 연결되는 순간들</span>
+                <div class="home-footer__sns-icons">
+                    <a href="#" class="home-footer__sns-icon" aria-label="인스타그램">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="6" r="1" fill="currentColor"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="home-footer__company">
+                <p class="home-footer__company-name">(주) 메종베르주</p>
+                <p class="home-footer__company-email">입점 제휴문의 hsu2536515@naver.com</p>
+            </div>
+            <div class="home-footer__links">
+                <a href="#">이용약관</a>
+                <a href="#">개인정보처리방침</a>
+                <a href="#">사업자정보</a>
+                <a href="#">FAQ</a>
+            </div>
+        </footer>
+
+        <!-- 탭바 공간 확보 -->
+        <div class="home-tabbar-spacer"></div>
+    </main>
+
+    <!-- ========== F. 하단 고정 탭바 ========== -->
+    <nav class="home-tabbar">
+        <a href="#" class="home-tabbar__item home-tabbar__item--active">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 9L12 2L21 9V20C21 21.1 20.1 22 19 22H5C3.9 22 3 21.1 3 20V9Z" stroke="currentColor" stroke-width="1.5"/><path d="M9 22V12H15V22" stroke="currentColor" stroke-width="1.5"/></svg>
+            <span>Home</span>
+        </a>
+        <a href="#" class="home-tabbar__item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" stroke="currentColor" stroke-width="1.5"/><rect x="14" y="3" width="7" height="7" stroke="currentColor" stroke-width="1.5"/><rect x="3" y="14" width="7" height="7" stroke="currentColor" stroke-width="1.5"/><rect x="14" y="14" width="7" height="7" stroke="currentColor" stroke-width="1.5"/></svg>
+            <span>Category</span>
+        </a>
+        <a href="#" class="home-tabbar__item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/><rect x="7" y="7" width="3" height="3" fill="currentColor"/><rect x="14" y="7" width="3" height="3" fill="currentColor"/><rect x="7" y="14" width="3" height="3" fill="currentColor"/><rect x="14" y="14" width="3" height="3" fill="currentColor"/></svg>
+            <span>QR</span>
+        </a>
+        <a href="#" class="home-tabbar__item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M18 8C18 6.4 17.4 4.9 16.2 3.8C15.1 2.6 13.6 2 12 2C10.4 2 8.9 2.6 7.8 3.8C6.6 4.9 6 6.4 6 8C6 15 3 17 3 17H21C21 17 18 15 18 8Z" stroke="currentColor" stroke-width="1.5"/><path d="M13.7 21C13.5 21.3 13.3 21.6 13 21.7C12.7 21.9 12.4 22 12 22C11.6 22 11.3 21.9 11 21.7C10.7 21.6 10.4 21.3 10.3 21" stroke="currentColor" stroke-width="1.5"/></svg>
+            <span>Alarm</span>
+        </a>
+        <a href="#" class="home-tabbar__item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M20 21V19C20 17.9 19.6 16.9 18.8 16.2C18.1 15.4 17.1 15 16 15H8C6.9 15 5.9 15.4 5.2 16.2C4.4 16.9 4 17.9 4 19V21" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="1.5"/></svg>
+            <span>My</span>
+        </a>
+    </nav>
+
+    <script src="js/home.js"></script>
+</body>
+</html>
